@@ -46,6 +46,53 @@ Architectural, structural, and section/detail evidence are distinct evidence str
 handled by one external research capability; this proof does not claim three
 simultaneous specialist research agents.
 
+## OpenAI Build Week: GPT-5.6 and Codex
+
+This standalone project and its governance workflow were built during OpenAI
+Build Week. The pre-existing `drawing-evidence-copilot` was not modified; it is
+used only as an external evidence capability.
+
+GPT-5.6 analyzed an authorized real-project evidence sheet containing
+architectural, structural, and detail information. It recorded the supported
+facts with their sources, but it was not allowed to approve modeling, modify the
+authority model, or publish a revision.
+
+Codex accelerated the implementation and verification of the readiness engine,
+JSON contracts, controlled work packages, isolated-WORK checks, full-model
+regression, immutable review packets, fail-closed promotion, public-release
+auditing, tests, and the judge-facing UI. It also helped investigate the
+historical regression failure whose evidence pointed to a shared IFC
+representation context. The repair remained confined to isolated WORK, followed
+by a complete regression rerun and a separate read-only review.
+
+The human product and engineering decisions remained explicit: the primary
+output is a modeling decision rather than geometry; missing evidence must fail
+closed; no new BIM component builder was added; the modeler cannot approve its
+own result; the registered authority source cannot be overwritten; and the 508
+finding is described precisely as unintended non-target representation
+differences, not 508 visibly destroyed physical components.
+
+The independent reviewer ran in a separate session and could not modify the
+candidate. The `/feedback` Codex Session ID for the main build thread is supplied
+directly in the Devpost submission form rather than published in this repository.
+
+## Judge testing
+
+- Live, public product: https://bim-production-readiness-demo.atheosy.chatgpt.site/
+- Public demo video: https://youtu.be/99ighKL4b_I
+- Supported local test platforms: Windows, macOS, and Linux with Python 3.11+
+- No private BIM file is required to run the public automated tests.
+
+After installing the test dependencies as shown below, run:
+
+```powershell
+python -m pytest -q
+```
+
+The public test fixtures exercise readiness, safe blocking, controlled work
+packages, regression, review-packet verification, promotion, public-release
+auditing, and the judge UI without distributing private project material.
+
 ## CLI
 
 Install the core and test dependencies:
