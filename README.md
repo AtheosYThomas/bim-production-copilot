@@ -118,3 +118,14 @@ IFC and Blender files, private authorization record, internal REV identifier,
 project name, local paths, and user names. `scripts/render_award_video.py`
 remains a 60-second minimal reproducibility sample of the same fail-closed Gates;
 it is not the final 2:45 submission video renderer.
+
+## License and excluded materials
+
+The source code and repository documentation are licensed under the
+[MIT License](LICENSE).
+
+The license does **not** grant rights to any project BIM/IFC model, Blender
+file, source drawing, project evidence, authorization record, or original model
+image. Those materials are intentionally excluded from this repository. Any
+publication authorization used for the submission video is narrow, separate,
+and does not permit redistribution of the underlying project materials.
