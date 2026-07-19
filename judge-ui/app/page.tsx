@@ -85,16 +85,16 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">PRODUCTION READINESS · MEASURED FROM MACHINE DECISIONS</p>
-          <h1>Know what is safe to model <em>before</em> BIM production begins.</h1>
+          <p className="eyebrow">ROLE-SEPARATED EVIDENCE + MODEL GOVERNANCE</p>
+          <h1>Cross-check evidence <em>before</em> BIM production begins.</h1>
           <p className="hero-lede">
-            AI evaluates source sufficiency, controls scope, and blocks unsafe work before any
-            agent can touch the authoritative BIM.
+            Separate roles research traceable drawing evidence, classify readiness, control
+            modeling scope, and independently review results before authority promotion.
           </p>
           <div className="hero-facts" aria-label="Project summary">
-            <div><strong>2</strong><span>real items assessed</span></div>
-            <div><strong>1</strong><span>controlled package</span></div>
-            <div><strong>0</strong><span>non-target differences</span></div>
+            <div><strong>14</strong><span>accepted evidence records</span></div>
+            <div><strong>2</strong><span>real readiness outcomes</span></div>
+            <div><strong>5</strong><span>separated role boundaries</span></div>
           </div>
         </div>
         <figure className="hero-visual">
@@ -104,6 +104,72 @@ export default function Home() {
             Publication-authorized, redacted project view
           </figcaption>
         </figure>
+      </section>
+
+      <section className="role-workflow" aria-labelledby="workflow-title">
+        <div className="workflow-heading">
+          <div>
+            <p className="eyebrow">HOW THE PRODUCT WORKS</p>
+            <h2 id="workflow-title">Evidence is cross-checked before geometry. Models are cross-checked before authority.</h2>
+          </div>
+          <p>
+            This demonstration proves a role-separated agent workflow. One evidence-research
+            capability covers multiple disciplines; it does not claim three simultaneous specialist agents.
+          </p>
+        </div>
+        <div className="workflow-grid">
+          <article>
+            <span>01 · EVIDENCE RESEARCH</span>
+            <h3>Traceable source claims</h3>
+            <div className="discipline-chips"><b>ARCHITECTURAL PLAN</b><b>STRUCTURAL DETAIL</b><b>SECTION / DETAIL</b></div>
+            <p>An external research role records source, region, discipline, confidence and authorization.</p>
+          </article>
+          <article>
+            <span>02 · READINESS ENGINE</span>
+            <h3>Cross-check requirements</h3>
+            <div className="workflow-outcomes"><b>STAIR · 14 / 14 → READY</b><b>INTERFACE · MISSING → HUMAN</b></div>
+            <p>A separate reasoning role decides whether evidence closes the scope. No evidence means no model.</p>
+          </article>
+          <article>
+            <span>03 · CONTROLLED MODELING</span>
+            <h3>Package before production</h3>
+            <div className="workflow-outcomes"><b>READY → WORK PACKAGE</b><b>ISOLATED WORK ONLY</b></div>
+            <p>The builder receives explicit targets and protected non-targets. Authority remains read-only.</p>
+          </article>
+          <article>
+            <span>04 · INDEPENDENT CHECKS</span>
+            <h3>Model result cross-check</h3>
+            <div className="workflow-outcomes"><b>FULL REGRESSION</b><b>READ-ONLY REVIEWER</b></div>
+            <p>The reviewer is a separate session and cannot build, repair, reclassify, or self-promote.</p>
+          </article>
+        </div>
+        <div className="evidence-matrix" aria-labelledby="evidence-matrix-title">
+          <div className="matrix-heading">
+            <div>
+              <p className="eyebrow">CROSS-SOURCE EVIDENCE MATRIX</p>
+              <h3 id="evidence-matrix-title">The sources close different parts of one bounded stair requirement set.</h3>
+            </div>
+            <p>Complementary requirement closure across authorized sources — not a claim that every value is independently duplicated.</p>
+          </div>
+          <div className="matrix-table" role="table" aria-label="Verified stair evidence matrix">
+            <div className="matrix-row matrix-labels" role="row">
+              <span role="columnheader">Requirement</span><span role="columnheader">Authorized source</span><span role="columnheader">Accepted value</span><span role="columnheader">Decision</span>
+            </div>
+            <div className="matrix-row" role="row">
+              <strong role="cell">Flight width</strong><span role="cell">Architectural plan</span><b role="cell">1,200 mm</b><em role="cell">ACCEPTED</em>
+            </div>
+            <div className="matrix-row" role="row">
+              <strong role="cell">Floor height</strong><span role="cell">Architectural section</span><b role="cell">4,200 mm</b><em role="cell">ACCEPTED</em>
+            </div>
+            <div className="matrix-row" role="row">
+              <strong role="cell">Waist thickness</strong><span role="cell">Structural detail</span><b role="cell">150 mm</b><em role="cell">ACCEPTED</em>
+            </div>
+          </div>
+          <div className="matrix-results">
+            <div className="matrix-ready"><span>STAIR SCOPE</span><strong>14 / 14 requirements closed</strong><b>READY_TO_MODEL</b></div>
+            <div className="matrix-human"><span>ADJACENT INTERFACE</span><strong>No approved architectural or structural evidence registered</strong><b>HUMAN_CLARIFICATION_REQUIRED</b></div>
+          </div>
+        </div>
       </section>
 
       <section className="readiness" aria-labelledby="readiness-title">
@@ -239,25 +305,42 @@ export default function Home() {
       <section className="defect-story" aria-labelledby="defect-title">
         <div className="defect-intro">
           <p className="eyebrow">A REAL DEFECT THE GATE STOPPED</p>
-          <h2 id="defect-title">The stair was correct. <em>The integration was not.</em></h2>
+          <h2 id="defect-title">A correct stair almost changed <em>508 unrelated BIM products.</em></h2>
           <p>
-            Authority Gate stopped 508 unintended non-target changes before they reached the
-            authoritative BIM. The source authority was never modified.
+            The stair passed in isolation. The first integrated WORK candidate did not.
+            Authority Gate blocked 508 unintended non-target representation differences before
+            promotion, so the authoritative BIM was never modified.
           </p>
         </div>
-        <dl className="defect-ledger">
-          <div><dt>Standalone stair audit</dt><dd className="pass-text">PASS · 34 / 34</dd></div>
-          <div><dt>Initial authority regression</dt><dd className="blocked-text">BLOCKED</dd></div>
-          <div><dt>Unintended non-target changes</dt><dd className="blocked-text">508</dd></div>
-          <div><dt>Root cause</dt><dd>Shared IFC representation context</dd></div>
-          <div><dt>After repair</dt><dd className="pass-text">0 differences across 2,334 products</dd></div>
-          <div><dt>Authority source modified</dt><dd className="pass-text">NO</dd></div>
-        </dl>
+        <div className="defect-comparison">
+          <article className="defect-before">
+            <div className="comparison-label"><span>BEFORE</span><strong>INITIAL WORK INTEGRATION</strong></div>
+            <div className="audit-line"><span>Isolated stair audit</span><strong>34 / 34 PASS</strong></div>
+            <div className="regression-line"><span>Authority regression</span><strong>BLOCKED · 14 / 15</strong></div>
+            <div className="defect-number"><strong>508</strong><span>unintended non-target<br />representation differences</span></div>
+            <p className="type-breakdown">350 slabs · 124 beams · 19 annotations · 13 columns · 2 stairs</p>
+          </article>
+          <article className="defect-cause">
+            <div className="comparison-label"><span>ROOT CAUSE</span><strong>SHARED IFC CONTEXT</strong></div>
+            <p>World coordinate system Y</p>
+            <div className="coordinate-change"><strong>0</strong><i>→</i><strong>2,400 mm</strong></div>
+            <small>A shared representation context was changed inside the candidate. The Gate detected its downstream fingerprint impact.</small>
+          </article>
+          <article className="defect-after">
+            <div className="comparison-label"><span>AFTER</span><strong>WORK-ONLY REPAIR</strong></div>
+            <div className="after-result"><strong>0 / 2,334</strong><span>protected non-target differences</span></div>
+            <ul>
+              <li>Regression rerun <strong>15 / 15 PASS</strong></li>
+              <li>Independent review <strong>0 / 0 / 0</strong></li>
+              <li>Authority source <strong>UNCHANGED</strong></li>
+            </ul>
+          </article>
+        </div>
         <div className="defect-flow" aria-label="Defect containment sequence">
           <span>34 / 34<br /><b>STAIR PASS</b></span><i>→</i>
-          <span>508<br /><b>INTEGRATION BLOCKED</b></span><i>→</i>
-          <span>ROOT CAUSE<br /><b>CONTEXT ISOLATED</b></span><i>→</i>
-          <span>0 / 2,334<br /><b>SAFE TO REVIEW</b></span>
+          <span>508<br /><b>GATE BLOCKED</b></span><i>→</i>
+          <span>WORK ONLY<br /><b>CONTEXT REPAIRED</b></span><i>→</i>
+          <span>0 / 2,334<br /><b>REVIEW + PROMOTION</b></span>
         </div>
       </section>
 
