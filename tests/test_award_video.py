@@ -3,7 +3,14 @@ from pathlib import Path
 
 import pytest
 
-from scripts.render_award_video import VideoGateError, validate_final_video_gates
+from scripts.render_award_video import (
+    EVIDENCE_MATRIX_NOTE,
+    NARRATION,
+    RESULT_CARDS,
+    ROLE_RESEARCH_SUBTITLE,
+    VideoGateError,
+    validate_final_video_gates,
+)
 
 
 def _write(path: Path, value: dict) -> Path:
@@ -46,3 +53,29 @@ def test_final_video_gate_rejects_pending_review(tmp_path: Path) -> None:
     _write(review, {"status": "AWAITING_INDEPENDENT_REVIEW"})
     with pytest.raises(VideoGateError, match="0/0/0 PASS"):
         validate_final_video_gates(review_path=review, promotion_path=promotion, readiness_index_path=index, sanitization_report_path=public)
+
+
+def test_narration_carries_the_verified_defect_story() -> None:
+    assert "role-separated agent workflow" in NARRATION
+    assert "separate readiness engine closes fourteen requirements" in NARRATION
+    assert "one thousand two hundred" in NARRATION
+    assert "four thousand two hundred" in NARRATION
+    assert "one hundred fifty" in NARRATION
+    assert "not every value is duplicated" in NARRATION
+    assert "five hundred eight non-target differences" in NARRATION
+    assert "two thousand three hundred thirty-four protected products" in NARRATION
+    assert "separate read-only reviewer" in NARRATION
+    assert "No agent can approve its own work" in NARRATION
+
+
+def test_storyboard_labels_distinguish_roles_and_representative_evidence() -> None:
+    assert ROLE_RESEARCH_SUBTITLE == (
+        "One research role gathers traceable evidence across disciplines.\n"
+        "A separate readiness engine decides what may proceed."
+    )
+    assert EVIDENCE_MATRIX_NOTE == "3 REPRESENTATIVE RECORDS SHOWN · 14 REQUIREMENTS EVALUATED"
+    assert [card[2] for card in RESULT_CARDS] == [
+        "FULL-MODEL REGRESSION",
+        "REGRESSION GATE",
+        "READ-ONLY INDEPENDENT REVIEW",
+    ]

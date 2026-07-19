@@ -1,6 +1,6 @@
 # BIM Authority Gate
 
-Evidence-Gated Multi-Agent Production for Authoritative BIM.
+Role-Separated Evidence and Model Governance for Authoritative BIM.
 
 This standalone project decides **what may safely become BIM, what may not, and
 why**. Its primary outputs are machine-readable readiness decisions and, only
@@ -38,6 +38,13 @@ UI. It still does not add a database, new BIM builder, or generic multi-agent
 execution platform. Promotion can create a brand-new derived REV only after an
 independent reviewer reports 0 critical, 0 major, and 0 unresolved findings;
 the registered authority source can never be overwritten.
+
+The demonstrated claim is a **role-separated agent workflow**: evidence research,
+readiness reasoning, modeling, read-only review, and authority promotion have
+separate role identities. The independent reviewer also ran in a separate session.
+Architectural, structural, and section/detail evidence are distinct evidence streams
+handled by one external research capability; this proof does not claim three
+simultaneous specialist research agents.
 
 ## CLI
 
@@ -81,10 +88,10 @@ controller.
 
 ## Judge UI and public safety
 
-The judge-facing UI lives in `judge-ui/`. It displays the five readiness-state
-counts, one controlled ready case, one safe failure, evidence, the independently
-reviewed promotion result, and a real 508-change regression defect stopped before
-authority publication. Public assets are separately authorized and their
+The judge-facing UI lives in `judge-ui/`. It leads with the role-separated evidence,
+readiness, modeling, and independent-check workflow, then displays the five readiness
+states, one controlled ready case, one safe failure, and a real 508-change regression
+defect as proof that post-model cross-checking matters. Public assets are separately authorized and their
 hashes are recorded in `judge-ui/public/asset-provenance.json`. Run
 `scripts/audit_public_release.py` before any public release; it fails closed on
 confidential terms, local paths, internal package identifiers, private model
