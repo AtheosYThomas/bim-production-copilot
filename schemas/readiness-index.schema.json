@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bim-authority-gate.local/schemas/readiness-index.schema.json",
+  "title": "BIM Authority Gate Readiness Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "real_project_item_count", "counts", "items", "authority_write_policy", "count_policy"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "real_project_item_count": {"type": "integer", "minimum": 0},
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["READY_TO_MODEL", "CROSSCHECK_REQUIRED", "HUMAN_CLARIFICATION_REQUIRED", "COORDINATION_REQUIRED", "BLOCKED"],
+      "properties": {
+        "READY_TO_MODEL": {"type": "integer", "minimum": 0},
+        "CROSSCHECK_REQUIRED": {"type": "integer", "minimum": 0},
+        "HUMAN_CLARIFICATION_REQUIRED": {"type": "integer", "minimum": 0},
+        "COORDINATION_REQUIRED": {"type": "integer", "minimum": 0},
+        "BLOCKED": {"type": "integer", "minimum": 0}
+      }
+    },
+    "items": {"type": "array", "items": {"type": "object"}},
+    "authority_write_policy": {"const": "DENIED_AT_READINESS_PHASE"},
+    "count_policy": {"const": "MEASURED_FROM_DECISION_ARTIFACTS"}
+  }
+}
+

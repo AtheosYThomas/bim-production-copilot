@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bim-authority-gate"
+version = "0.1.0"
+description = "Evidence-gated BIM readiness decisions and controlled work packages"
+requires-python = ">=3.11"
+dependencies = ["ifcopenshell>=0.8.3,<0.9"]
+
+[project.optional-dependencies]
+test = ["pytest>=9,<10"]
+video = ["Pillow>=11,<13", "imageio-ffmpeg>=0.6,<0.7"]
+
+[project.scripts]
+bim-authority-gate = "bim_authority_gate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]

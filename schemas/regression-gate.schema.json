@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bim-authority-gate.local/schemas/regression-gate.schema.json",
+  "title": "BIM Authority Gate Regression GateResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "gate", "status", "package_id", "decision_id",
+    "authority", "candidate", "checks", "summary", "non_target",
+    "target_metrics", "external_integration_audit", "findings", "review_policy"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "gate": {"const": "REGRESSION"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "package_id": {"type": "string"},
+    "decision_id": {"type": "string"},
+    "authority": {"type": "object"},
+    "candidate": {"type": "object"},
+    "checks": {"type": "array", "minItems": 1},
+    "summary": {"type": "object"},
+    "non_target": {"type": "object"},
+    "target_metrics": {"type": "object"},
+    "external_integration_audit": {"type": "object"},
+    "findings": {"type": "array"},
+    "review_policy": {"const": "READ_ONLY"}
+  }
+}
+

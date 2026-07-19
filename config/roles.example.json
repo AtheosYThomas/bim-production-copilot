@@ -1,0 +1,19 @@
+{
+  "research": {
+    "role_id": "external:drawing-evidence-copilot:research"
+  },
+  "reasoning": {
+    "role_id": "bim-authority-gate:readiness-engine"
+  },
+  "modeling": {
+    "role_id": "external:drawing-evidence-copilot:builder"
+  },
+  "review": {
+    "role_id": "bim-authority-gate:independent-reviewer",
+    "read_only": true
+  },
+  "authority_promotion": {
+    "role_id": "bim-authority-gate:authority-controller"
+  }
+}
+

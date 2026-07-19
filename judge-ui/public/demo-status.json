@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "status": "PROMOTED",
+  "ready_next_action": "Approved by a separate read-only reviewer and promoted by the controlling authority role.",
+  "current_rev_status": "New authority REV created — confidential identifier withheld",
+  "independent_review": {
+    "result": "PASS — 0 / 0 / 0",
+    "state": "pass"
+  },
+  "promotion": {
+    "result": "NEW REV CREATED",
+    "state": "pass",
+    "flow_label": "PROMOTED"
+  },
+  "rev_transition": {
+    "source": "REV227 — unchanged",
+    "work": "WORK-ETA-01 — reviewed",
+    "promoted": "REV228 — created"
+  }
+}

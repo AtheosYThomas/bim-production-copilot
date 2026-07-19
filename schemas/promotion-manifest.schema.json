@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bim-authority-gate.local/schemas/promotion-manifest.schema.json",
+  "title": "Controlled BIM REV Promotion Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "status", "promotion_policy", "promoter_role_id",
+    "package_id", "decision_id", "review_findings", "gates",
+    "previous_authority", "approved_candidate", "new_authority",
+    "authority_index_path", "overwrite_permitted", "source_authority_unchanged"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "status": {"const": "PROMOTED_TO_NEW_AUTHORITY_REV"},
+    "promotion_policy": {"const": "CONTROLLING_AUTHORITY_ONLY"},
+    "promoter_role_id": {"type": "string", "minLength": 1},
+    "package_id": {"type": "string", "pattern": "^WP-"},
+    "decision_id": {"type": "string", "pattern": "^DEC-"},
+    "review_findings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["B0", "B1", "B2"],
+      "properties": {"B0": {"const": 0}, "B1": {"const": 0}, "B2": {"const": 0}}
+    },
+    "gates": {"type": "object"},
+    "previous_authority": {"type": "object"},
+    "approved_candidate": {"type": "object"},
+    "new_authority": {"type": "object"},
+    "authority_index_path": {"type": "string", "minLength": 1},
+    "overwrite_permitted": {"const": false},
+    "source_authority_unchanged": {"const": true}
+  }
+}

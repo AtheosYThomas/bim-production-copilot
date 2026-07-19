@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "publication_scope": "authorized real-project demonstration with confidential identifiers withheld",
+  "authorization": {
+    "publication_authorized": true,
+    "sanitization_confirmed": true,
+    "authorized_source_sha256": "AC0B3ABF570D6BE8BE76DC1507D701E16A5B7B9ED06C03D90791B21E37DAE90C"
+  },
+  "assets": [
+    {
+      "file": "authorized-bim-oblique.png",
+      "sha256": "55CB871D69166A966F2F5E744C88858D079B7662019F81D3B4CC17900E778ECF",
+      "provenance": "publication-authorized redacted BIM context"
+    },
+    {
+      "file": "authorized-drawing-evidence.png",
+      "sha256": "0585047823B421981D50D94B1B769623B9D36CEF48EA0DFDDC806A791EBBFAD5",
+      "provenance": "publication-authorized redacted drawing evidence"
+    }
+  ]
+}

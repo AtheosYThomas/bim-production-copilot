@@ -1,0 +1,24 @@
+{
+  "source_hierarchy": [
+    "structural_detail",
+    "architectural_section",
+    "architectural_plan"
+  ],
+  "records": {
+    "stair_width_mm": {
+      "discipline": "architecture",
+      "source_type": "architectural_plan",
+      "source_ref": "REPLACE_WITH_APPROVED_SOURCE_REFERENCE"
+    }
+  },
+  "requirements": {
+    "stair_width_mm": {
+      "minimum_confidence": 0.9,
+      "required_disciplines": [
+        "architecture",
+        "structure"
+      ]
+    }
+  }
+}
+

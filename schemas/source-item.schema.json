@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bim-authority-gate.local/schemas/source-item.schema.json",
+  "title": "BIM Authority Gate Source Item",
+  "type": "object",
+  "required": [
+    "schema_version", "item", "authorization", "authority_baseline",
+    "source_hierarchy", "requirements", "evidence", "issues",
+    "coordinate_definition", "modeling_scope", "unresolved_assumptions", "roles"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "item": {
+      "type": "object",
+      "required": ["item_id", "name", "component_type"],
+      "properties": {
+        "item_id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "component_type": {"type": "string", "minLength": 1}
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "required": ["project_use_authorized", "drawing_use_authorized", "authority_inspection_authorized"],
+      "properties": {
+        "project_use_authorized": {"type": "boolean"},
+        "drawing_use_authorized": {"type": "boolean"},
+        "authority_inspection_authorized": {"type": "boolean"}
+      }
+    },
+    "authority_baseline": {
+      "type": "object",
+      "required": [
+        "authority_file_path", "rev", "sha256", "observed_sha256",
+        "ifc_product_count", "global_id_fingerprint", "project_units",
+        "coordinate_origin", "storeys", "hold_states", "rfi_states"
+      ]
+    },
+    "source_hierarchy": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "requirements": {"type": "array", "items": {"type": "object"}},
+    "evidence": {"type": "array", "items": {"type": "object"}},
+    "issues": {"type": "array", "items": {"type": "object"}},
+    "coordinate_definition": {"type": "object"},
+    "modeling_scope": {"type": "object"},
+    "unresolved_assumptions": {"type": "array"},
+    "roles": {
+      "type": "object",
+      "required": ["research", "reasoning", "modeling", "review", "authority_promotion"]
+    },
+    "external_provenance": {"type": "object"}
+  }
+}
