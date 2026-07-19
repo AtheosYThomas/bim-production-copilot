@@ -1,4 +1,4 @@
-# BIM Authority Gate
+# BIM Production Copilot
 
 Role-Separated Evidence and Model Governance for Authoritative BIM.
 
