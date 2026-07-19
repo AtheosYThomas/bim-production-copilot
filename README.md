@@ -105,7 +105,16 @@ review packet with a deterministic inventory and SHA-256 for every input.
 the packet without extraction or mutation.
 
 The optional video tooling is installed with `python -m pip install -e
-".[video]"`. `scripts/render_award_video.py` refuses to render the final
-60-second video unless a read-only independent review is 0/0/0, controlled
-promotion created a new REV without overwriting the source, readiness counts are
-complete, and the public sanitization Gate passes.
+".[video]"`. The Build Week submission video is 2 minutes 45 seconds and tells
+the same public-safe story as this repository: cross-source evidence before
+modeling, safe release or safe block, isolated work, full-model comparison,
+separate read-only review, and controlled creation of a new official version.
+It was rendered only after the review returned 0/0/0, the source authority
+remained unchanged, every public-safety Gate passed, and the exact model visuals
+received narrow submission-video authorization.
+
+This public repository intentionally excludes the raw model screenshots, raw
+IFC and Blender files, private authorization record, internal REV identifier,
+project name, local paths, and user names. `scripts/render_award_video.py`
+remains a 60-second minimal reproducibility sample of the same fail-closed Gates;
+it is not the final 2:45 submission video renderer.
